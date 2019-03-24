@@ -1,0 +1,21 @@
+@import "../../styles.scss";
+
+p {
+    color: $white;
+}
+
+.title {
+    padding-top: 2em;
+}
+
+.subtitle {
+    margin: 1em auto 1em auto;
+}
+
+.buttons {
+    padding-top: 1.5em;
+}
+
+.full-body {
+    height: 100vh;
+}

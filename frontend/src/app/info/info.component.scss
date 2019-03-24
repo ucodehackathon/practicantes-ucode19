@@ -1,0 +1,17 @@
+@import "../../styles.scss";
+
+.text {
+  color: $white;
+}
+
+.bubble {
+  width: 2em;
+  height: 2em;
+  border: solid 2px $white;
+  border-radius: 50%;
+  background: transparent;
+}
+
+.bubble:hover {
+  cursor: pointer;
+}

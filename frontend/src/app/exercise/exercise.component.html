@@ -1,0 +1,16 @@
+<div class="d-flex justify-content-center title flex-column full-body"
+(swipeleft)="resume()"
+(swiperight)="stop()"
+(swipeUp)="onSwipeUp()"
+(swipeDown)="onSwipeDown()">
+
+  <h1 class="title-text" style="margin: -6em auto 0 auto; text-align: center"><b>Ready to start the session</b></h1>
+  
+  <div class="d-flex justify-content-center flex-column" style="padding-top: 2em;">
+    <h3 class="title-text" style="margin: 0 auto 0 auto">{{hour}} : {{minute}} : {{second}}</h3>
+    <div class="d-flex justify-content-center buttons">
+      <button (click)="resume()" type="button" mdbBtn color="primary" mdbWavesEffect>Resume</button>
+      <button (click)="stop()" type="button" mdbBtn color="danger" mdbWavesEffect>Stop</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+@import "../../styles.scss";
+
+.title {
+  margin-top: 20vh;
+}
+
+.title-text {
+  color: $white;
+}
+
+.info-section {
+  position: absolute;
+  bottom: .3em;
+  left: .3em;
+}
+
+.unselect {
+  pointer-events: none;
+}
