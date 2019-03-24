@@ -1,0 +1,20 @@
+language: python
+
+python:
+  - "3.6"
+
+install: 
+  - pip install -r requirements.txt
+
+script:
+  - python test/test.py
+
+branches:
+  only:
+    - master
+
+deploy:
+  - provider: heroku
+    api_key:
+      secure: $HEROKU_API_KEY
+    app: ucode-ml
