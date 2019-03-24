@@ -1,0 +1,32 @@
+<div class="full-body" (swipeleft)="onSwipeLeft()">
+    <div class="d-flex justify-content-center" style="padding-top:3em;">
+      <h1 class="title-text" style="text-align: center"><b>Sensor Simulator</b></h1>
+    </div>
+</div>
+<a (click)="openSensor()" mdbWavesEffect style="position: absolute; right: 1em; top: 7em; border-radius: 50%; background-color:whitesmoke; width: 4em; height: 4em">
+  <img src="../../assets/icons/power-off-solid.svg" alt="power-icon" style="width: 3em; padding-top: 1em; padding-left: .95em;">
+</a>
+
+<a (click)="swapStatus('walking')" mdbWavesEffect style="position: absolute; left: 16em; bottom: 12em; border-radius: 50%; background-color:whitesmoke; width: 3em; height: 3em; z-index:10">
+  <p class="inside">Walk</p>
+</a>
+<a (click)="swapStatus('running')" mdbWavesEffect style="position: absolute; left: 10em; bottom: 16em; border-radius: 50%; background-color:whitesmoke; width: 3em; height: 3em; z-index:10">
+  <p class="inside">Run</p>
+</a>
+<a (click)="swapStatus('dribbling')" mdbWavesEffect style="position: absolute; left: 14em; bottom: 24em; border-radius: 50%; background-color:whitesmoke; width: 3em; height: 3em; z-index:10">
+  <p class="inside dribbling">Dribbling</p>
+</a>
+<a (click)="swapStatus('pass')" mdbWavesEffect style="position: absolute; left: 18em; bottom: 3em; border-radius: 50%; background-color:whitesmoke; width: 3em; height: 3em; z-index:10">
+  <p class="inside">Pass</p>
+</a>
+<a (click)="swapStatus('shot')" mdbWavesEffect style="position: absolute; left: 2em; bottom: 12em; border-radius: 50%; background-color:whitesmoke; width: 3em; height: 3em; z-index:10">
+  <p class="inside shoot">Shoot</p>
+</a>
+
+<div style="position: absolute; bottom: 30em; left: 3em; z-index:1;">
+  <svg width="20" height="20" viewBox="0 0 85 85" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="42.5" cy="42.5" r="42.5" fill="#8A8A8A"/>
+    <circle cx="42" cy="42" r="40" fill="#616161"/>
+    <circle [ngClass]="{'led-on': sensorService.status, 'led-off': !sensorService.status}" cx="42" cy="42" r="35" fill="unset"/>
+  </svg>
+</div>
